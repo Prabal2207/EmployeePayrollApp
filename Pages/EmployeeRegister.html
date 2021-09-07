@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/EmployeeRegister.css" />
+    <title>Register</title>
+</head>
+<body>
+    <!----------------------------------------UC1-Header--------------------------------------->
+    <header class="header">
+        <div class="logo">
+            <img
+            src="../assets/images/logo.png"
+            alt="Logo" 
+            />
+            <div class="logo_text">
+                <span>employee</span><br>
+                <span class="logo_text_payroll">payroll</span>
+            </div>
+        </div>
+    </header>
+    <!---------------------------------UC2-Input Form--------------------------------------------->
+    <div class="InputForm">
+        <form class="form" action="#" onsubmit="save(event); return false;" onreset="resetForm() ;return false;">
+            <span class="form_header">Employee Payroll Register</span>
+            <div class="form_input_content">
+                <label class="form_input_label text" for="empName">Employee Name</label>
+                <input type="text" class="input" name="empName" id="empName" placeholder="Enter Name Here" required>
+                <error class="error" id="errorName"></error>
+            </div>
+            <!----------------------UC3------------------------------------>
+            <div class="form_input_content">
+                <label class="form_input_label text" for="profiles">Profile Pic</label>
+                <div class="profile_pictures">
+                    <label class="form_input_label">
+                            <input type="radio" name="profile" id="profile1" value="../assets/profile-images/Ellipse -1.png" required>
+                            <img class="profile" id="img1" src="../assets/profile-images/Ellipse -1.png" />
+                    </label>
+                    <label class="form_input_label">
+                        <input type="radio" name="profile" id="profile2" value="../assets/profile-images/Ellipse -2.png" required>
+                        <img class="profile" id="img2" src="../assets/profile-images/Ellipse -2.png" />
+                    </label>
+                    <label class="form_input_label">
+                        <input type="radio" name="profile" id="profile3" value="../assets/profile-images/Ellipse -3.png" required>
+                        <img class="profile" id="img3" src="../assets/profile-images/Ellipse -3.png" />
+                    </label>
+                    <label class="form_input_label">
+                        <input type="radio" name="profile" id="profile4" value="../assets/profile-images/Ellipse -4.png" required>
+                        <img class="profile" id="img4" src="../assets/profile-images/Ellipse -4.png" />
+                    </label>
+            
+                </div>
+            </div>
+            <!------------------------------------------------------Gender--------------------------------------->
+            <div class="form_input_content">
+                <label class="form_input_label text" for="gender">Gender</label>
+                <div class="form_gender">
+                    <label class="form_input_label text">
+                        <input type="radio" name="gender" id="genderMale" value="male" required>&nbspMale
+                    </label>
+                    <label class="form_input_label text">
+                        <input type="radio" name="gender" id="genderFemale" value="female" required>&nbspFemale
+                    </label>
+                    <label class="form_input_label text">
+                        <input type="radio" name="gender" id="genderOther" value="others" required>&nbspOthers
+                    </label>
+                </div>
+            </div>
+            <!-------------------------Dept---------------------------------------------------->
+            <div class="form_input_content">
+                <label class="form_input_label text" for="Department">Department</label>
+                <div class="form_checkboxes">
+                    <input type="checkbox" name="dept" id="hr" value="hr" >
+                    <label class="text" for="hr">HR</label>
+                </div>
+                <div class="form_checkboxes">
+                    <input type="checkbox" name="dept" id="sales" value="sales" >
+                    <label class="text" for="sales">Sales</label>
+                </div>
+                <div class="form_checkboxes">
+                    <input type="checkbox" name="dept" id="finance" value="finance" >
+                    <label class="text" for="finance">Finance</label>
+                </div>
+                <div class="form_checkboxes">
+                    <input type="checkbox" name="dept" id="engineer" value="engineer" >
+                    <label class="text" for="engineer">Engineer</label>
+                </div>
+                <div class="form_checkboxes">
+                    <input type="checkbox" name="dept" id="others" value="others" >
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            <!-----Salary----------------------------------------------------------------->
+            <div class="form_input_content">
+                <label class="form_input_label text" for="salary">Salary</label>
+                <input type="range" name="salary" id="salary" class="salary" min="300000" max="600000" step="500" value="450000" required>
+                <output id="salaryOutput" class="text" value="450000"></output>
+            </div>
+            <!-----------------------------Start date-->
+            <div class="form_input_content">
+                <label class="form_input_label text" for="startDate">Start Date</label>
+                <div id="date">
+                    <select id="day" name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select id="month" name="month">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                    <select id="year" name="year">
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                    </select>
+                    <error id="errorDate" class="error" name="errorDate"></error>
+                </div>
+            </div>
+            <!----------------------------Notes------------------------------------>
+            <div class="form_input_content">
+                <label class="form_input_label text" for="notes">Notes</label>
+                <textarea rows="4" class="input" placeholder="Enter Any Notes or Comments here" id="notes" style="resize: none;" required></textarea>
+            </div>
+            <div class="button_container">
+                <a href="./Homepage.html" class="button" style="text-decoration: none;background-color: red;text-align: center;color:white">Cancel</a>
+                <div class="buttons">
+                    <button type="submit" class="submit_button button" id="submitButton">Submit</button>
+                    <button type="reset" class="reset_button button">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <script type="text/javascript" src="../js/EmployeePayrollData.js"></script> -->
+    <script type="text/javascript" src="../js/EmployeeRegister.js"></script>
+    <script type="text/javascript" src="../js/SiteProperties.js"></script>
+    <script type="text/javascript" src="../js/Utility.js"></script>
+</body>
+</html>
